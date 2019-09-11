@@ -39,7 +39,7 @@ plt.plot(time_exact,temp_exact, label = labels[0])
 #use computed temperature at 10 seconds as benchmark for convergence
 T_10 = [temp_exact[-1]] 
 
-print "Tempurature at 10s"
+print ("Tempurature at 10s")
 
 j=0
 print ('{:s}  {:20.18f}'.format(labels[j],T_10[j]))
