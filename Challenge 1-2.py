@@ -72,8 +72,8 @@ while c > 0.001: #stop when improvement from previous step size is less than 0.1
     labels += ["dt = "+str(dt[j])+ "s"]
     plt.plot(time,temp_e,label=labels[j+1])
     print ('{:s}  {:20.18f}'.format(labels[j+1],T_10[j+1]))
-
-    c = abs((T_10[-2]-T_10[-1])/T_10[-2])*100 #compute percent improvement
+    if len(T_10) > 2: #don't use exact result to compute improvement
+        c = abs((T_10[-2]-T_10[-1])/T_10[-2])*100 #compute percent improvement
     j+=1
 
 plt.legend(loc='best')
