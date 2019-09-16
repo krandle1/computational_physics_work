@@ -72,4 +72,4 @@ plt.ylim((50,60))
 plt.xlabel("Time(s)")
 plt.ylabel("Temperature (C)")
 
-plt.title("Accuracy of Euler approx. with varying time step")
+plt.title("Accuracy of Runge-Kutta approx. with varying time step")
