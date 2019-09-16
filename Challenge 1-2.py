@@ -56,7 +56,7 @@ print ('{:s}  {:20.18f}'.format(labels[j],T_10[j]))
 c = 1
 
 #vary time step size and compute value at 10s
-while c > 0.1: #stop when improvement from previous step size is less than 0.1%
+while c > 0.001: #stop when improvement from previous step size is less than 0.1%
 
     nsteps = int(tmax/dt[j])  # number of steps
     time = [x*dt[j] for x in range(nsteps+1)] #for plotting
