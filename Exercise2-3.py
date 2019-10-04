@@ -145,7 +145,7 @@ for i in range(len(theta)):
     plt.plot(theta[i][1:98],diffxsec[i],color=c)
 plt.ylabel(r'$\frac{d\sigma}{d\Omega}$',rotation=0)
 plt.xlabel(r'$\Theta$')
-plt.ylim(-500,500)
+plt.ylim(0,500)
 plt.xlim(0,np.pi)
 plt.title('Differential cross section for scattering angles at varying energy')
 ccbar = plt.colorbar(plt.cm.ScalarMappable(cmap="rainbow"))
