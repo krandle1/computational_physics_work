@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Oct  2 22:02:45 2019
-
 @author: kirstenrandle
 """
 
@@ -91,8 +90,11 @@ sings = [[],[]] #starting point for probe range for orbits
 
 ########################################
 #do physics
+print("Starting loops, total 16, Energies from 0.1 to 100")
+
 for e in range(len(Energy)):
     E=Energy[e]
+    print("Energy = " + str(E))
     v = np.sqrt(2.*E/m) #using defined energy, find velocity of particle
     if E == V0:
         plt.figure(0)
@@ -128,7 +130,7 @@ for e in range(len(Energy)):
         sings[1] += [b[next(a for a, v in enumerate(theta[e]) if v > np.pi)]]    
 ##################################
 
-
+print("Loops finished")
 #################################
 #compute differential cross section, approaching but skipping theta = 0
 #to avoid dividing by zero which will cause an overflow
@@ -155,3 +157,6 @@ ccbar.ax.set_ylabel("Energy",rotation=270)
 
 plt.show()
 
+input("Press any key to exit")
+
+exit()
